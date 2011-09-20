@@ -9,7 +9,7 @@ our @EXPORT = qw(format_mode file_mode format_perms);
 
 our (@perms, @ftype);
 @perms = qw(--- --x -w- -wx r-- r-x rw- rwx);
-@ftype = qw(. p c ? d ? b ? - ? l ? s ? ? ?);
+@ftype = qw(. p c ? d ? b ? - ? l ? s D ? ?);
 $ftype[0] = '';
 
 our $NOVICE_MODE = 1;  # Default on?
