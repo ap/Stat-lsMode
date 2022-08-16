@@ -219,22 +219,4 @@ Maybe it C<file_mode> should have an option that says that if the file
 is a symlink, to format the mode of the pointed to file instead of the
 mode of the link itself, the way C<ls -Ll> does.
 
-=head1 SEE ALSO 
-
-=over 4
-
-=item * 
-
-L<ls>
-
-=item * 
-
-L<chmod>
-
-=item * 
-
-L<stat>
-
-=back
-
 =cut
