@@ -101,7 +101,15 @@ sub _novice_warning {
   }
 }
 
-=head1 NAME  
+1;
+
+__END__
+
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
 
 Stat::lsMode - format file modes like the C<ls -l> command does
 
@@ -130,6 +138,8 @@ regular file that is readable by everyone and writable only by its
 owner has the mode string C<-rw-r--r-->.  C<Stat::lsMode> will either
 examine the file and produce the right mode string for you, or you can
 pass it the mode that you get back from Perl's C<stat> call.
+
+=head1 INTERFACE
 
 =head2 C<format_mode>
 
@@ -226,9 +236,5 @@ L<chmod>
 L<stat>
 
 =back
-
-=head1 AUTHOR
-
-Mark-Jason Dominus
 
 =cut
