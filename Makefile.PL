@@ -3,7 +3,7 @@ use ExtUtils::MakeMaker;
 # the contents of the Makefile that is written.
 WriteMakefile(
     'NAME'	=> 'Stat::lsMode',
-    'VERSION_FROM' => 'lsMode.pm', # finds $VERSION
+    'VERSION_FROM' => 'lib/Stat/lsMode.pm', # finds $VERSION
 #    'LIBS'	=> [''],   # e.g., '-lm' 
 #    'DEFINE'	=> '',     # e.g., '-DHAVE_SOMETHING' 
 #    'INC'	=> '',     # e.g., '-I/usr/include/other' 
