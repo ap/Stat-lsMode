@@ -1,15 +1,18 @@
+use strict; use warnings;
+
 package Stat::lsMode;
-$VERSION = '0.50';
+our $VERSION = '0.50';
 
 use Carp;
 BEGIN { require Exporter; *import = \&Exporter::import }
-@EXPORT = qw(format_mode file_mode format_perms);
+our @EXPORT = qw(format_mode file_mode format_perms);
 
+our (@perms, @ftype);
 @perms = qw(--- --x -w- -wx r-- r-x rw- rwx);
 @ftype = qw(. p c ? d ? b ? - ? l ? s ? ? ?);
 $ftype[0] = '';
 
-$NOVICE_MODE = 1;  # Default on?
+our $NOVICE_MODE = 1;  # Default on?
 sub novice {
   my $pack = shift;
   croak "novice_mode requires one boolean argument" unless @_ == 1;
