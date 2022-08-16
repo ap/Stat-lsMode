@@ -2,8 +2,7 @@ package Stat::lsMode;
 $VERSION = '0.50';
 
 use Carp;
-use Exporter;
-@ISA = qw(Exporter);
+BEGIN { require Exporter; *import = \&Exporter::import }
 @EXPORT = qw(format_mode file_mode format_perms);
 
 @perms = qw(--- --x -w- -wx r-- r-x rw- rwx);
