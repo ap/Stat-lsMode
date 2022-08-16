@@ -1,7 +1,7 @@
 use strict; use warnings;
 
 package Stat::lsMode;
-our $VERSION = '0.50';
+our $VERSION = '0.51';
 
 use Carp;
 BEGIN { require Exporter; *import = \&Exporter::import }
