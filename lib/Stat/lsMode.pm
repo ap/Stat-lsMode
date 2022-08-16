@@ -80,7 +80,8 @@ sub format_perms {
 # They are all almost certain to have occurred 
 # when someone used decimal instead of octal to specify a mode.
 
-@badmodes = (777, 775, 755, 770, 700, 750,
+my %badmode = map +($_ => 1), (
+  777, 775, 755, 770, 700, 750,
 	     751,
 	     666, 664, 644, 660, 600, 640,
 	     444, 440, 
@@ -88,7 +89,6 @@ sub format_perms {
 	     # 000  *is* OK.  It means just what you think.
 	     711, 771, 751, 551, 111,
 	    );
-%badmode = map {($_ => 1)} @badmodes;
 
 # Novices like to ask for the bits for mode `666' instead of `0666'.
 # Try to detect and diagnose that.
