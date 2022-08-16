@@ -1,5 +1,4 @@
 package Stat::lsMode;
-
 $VERSION = '0.50';
 
 use Carp;
@@ -35,7 +34,7 @@ sub format_mode {
   my @permstrs = @perms[($mode&0700)>>6, ($mode&0070)>>3, $mode&0007];
   my $ftype = $ftype[($mode & 0170000)>>12];
   my @ftype = $opts{no_ftype} ? () : ($ftype);
-  
+
   if ($setids) {
     if ($setids & 01) {		# Sticky bit
       $permstrs[2] =~ s/([-x])$/$1 eq 'x' ? 't' : 'T'/e;
@@ -71,9 +70,6 @@ sub file_mode {
 
   format_mode($mode, @_);
 }
-
-
-
 
 sub format_perms {
   croak "format_perms requires a permission mode as an argument" unless @_ == 1;
