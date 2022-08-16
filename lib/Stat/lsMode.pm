@@ -36,13 +36,13 @@ sub format_mode {
   my @ftype = $opts{no_ftype} ? () : ($ftype);
 
   if ($setids) {
-    if ($setids & 01) {		# Sticky bit
+    if ($setids & 01) { # Sticky bit
       $permstrs[2] =~ s/([-x])$/$1 eq 'x' ? 't' : 'T'/e;
     }
-    if ($setids & 04) {		# Setuid bit
+    if ($setids & 04) { # Setuid bit
       $permstrs[0] =~ s/([-x])$/$1 eq 'x' ? 's' : 'S'/e;
     }
-    if ($setids & 02) {		# Setgid bit
+    if ($setids & 02) { # Setgid bit
       $permstrs[1] =~ s/([-x])$/$1 eq 'x' ? 's' : 'S'/e;
     }
   }
@@ -82,13 +82,13 @@ sub format_perms {
 
 my %badmode = map +($_ => 1), (
   777, 775, 755, 770, 700, 750,
-	     751,
-	     666, 664, 644, 660, 600, 640,
-	     444, 440, 
-	     400, # 400 = rw--w---- which is just barely plausible.  
-	     # 000  *is* OK.  It means just what you think.
-	     711, 771, 751, 551, 111,
-	    );
+  751,
+  666, 664, 644, 660, 600, 640,
+  444, 440,
+  400, # 400 = rw--w---- which is just barely plausible.
+  # 000  *is* OK.  It means just what you think.
+  711, 771, 751, 551, 111,
+);
 
 # Novices like to ask for the bits for mode `666' instead of `0666'.
 # Try to detect and diagnose that.
