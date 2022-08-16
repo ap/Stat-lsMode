@@ -1,15 +1,3 @@
-#
-#
-# Stat::lsMode
-#
-# Copyright 1998 M-J. Dominus 
-# (mjd-perl-lsmode@plover.com)
-#
-# You may distribute this module under the same terms as Perl itself.
-#
-# $Revision: 1.2 $ $Date: 1998/04/20 01:27:25 $
-
-
 package Stat::lsMode;
 
 $VERSION = '0.50';
@@ -229,10 +217,6 @@ mode of the link itself, the way C<ls -Ll> does.
 
 =item * 
 
-C<http://www.plover.com/~mjd/perl/lsMode/>.
-
-=item * 
-
 L<ls>
 
 =item * 
@@ -247,7 +231,6 @@ L<stat>
 
 =head1 AUTHOR
 
-Mark-Jason Dominus (C<mjd-perl-lsmode@plover.com>).
+Mark-Jason Dominus
 
 =cut
-
